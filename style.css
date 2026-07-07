@@ -1,0 +1,103 @@
+/* 1. Algemene Reset & Basisinstellingen */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+/* Achtergrondkleur ingesteld op puur zwart, passend bij de banner */
+body { 
+    background-color: #000000; 
+    color: #ffffff; 
+    overflow-x: hidden;
+}
+
+/* 2. Navigatiebalk Styling (Gecentreerd zoals in het voorbeeld) */
+header {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0, 210, 255, 0.2);
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 25px 20px;
+}
+
+.navbar a {
+    color: #00d2ff; /* Elektrisch neon blauw */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 2px;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+/* Subtiele gloed wanneer je over de menu-links beweegt */
+.navbar a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px #00d2ff;
+}
+
+/* 3. Hero / Midden Sectie Styling */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 120px 20px 40px 20px;
+    background: radial-gradient(circle, rgba(0,102,255,0.1) 0%, rgba(0,0,0,1) 70%);
+}
+
+.content {
+    max-width: 1100px;
+    width: 100%;
+}
+
+/* Responsieve banner met een blauwe gloed rondom */
+.banner-img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 25px;
+    border-radius: 4px;
+    box-shadow: 0 0 30px rgba(0, 102, 255, 0.3);
+}
+
+/* Slogan tekst styling */
+.slogan {
+    font-size: 18px;
+    font-weight: 600;
+    color: #00d2ff;
+    margin-bottom: 35px;
+    letter-spacing: 3px;
+    text-shadow: 0 0 8px rgba(0, 210, 255, 0.5);
+}
+
+/* 4. Discord Actieknop met Verloop en Gloed-effect */
+.discord-btn {
+    display: inline-block;
+    padding: 16px 45px;
+    background: linear-gradient(45deg, #0066ff, #00d2ff);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    box-shadow: 0 0 25px rgba(0, 102, 255, 0.6);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Knop beweegt iets omhoog en gloeit feller bij hover */
+.discord-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 35px rgba(0, 210, 255, 0.9);
+}
