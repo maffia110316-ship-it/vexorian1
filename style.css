@@ -104,7 +104,7 @@ h1 {
 }
 
 /* ==========================================================================
-   5. Team Pagina Rollen & Kleuren (Custom Styling)
+   5. Team Pagina Rollen & Kleuren (Aangepast naar jouw wensen)
    ========================================================================== */
 .role-title {
     display: block;
@@ -113,25 +113,28 @@ h1 {
     margin-bottom: 10px;
 }
 
-/* De Leader krijgt een gouden tint */
+/* De Leader krijgt nu een paarse rand en tekst (#a020f0) */
 .leader-card {
-    border-color: #ffd700;
+    border-color: #a020f0;
 }
 .leader-card .role-title {
-    color: #ffd700;
+    color: #a020f0;
 }
 
-/* De Co-Leader krijgt een zilveren tint */
+/* De Co-Leader krijgt nu een blauwe rand en tekst (#00d4ff) */
 .co-leader-card {
-    border-color: #c0c0c0;
+    border-color: #00d4ff;
 }
 .co-leader-card .role-title {
-    color: #c0c0c0;
+    color: #00d4ff;
 }
 
-/* De Admins behouden de blauwe clan kleur */
+/* De Admins krijgen nu een roze rand en tekst (#ff69b4) */
+.admin-card {
+    border-color: #ff69b4;
+}
 .admin-card .role-title {
-    color: #00d4ff;
+    color: #ff69b4;
 }
 
 .member-name {
