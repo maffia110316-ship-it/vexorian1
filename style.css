@@ -39,14 +39,48 @@ h1 {
 }
 
 /* ==========================================================================
-   3. Hero Sectie & Startscherm (Welkom)
+   3. Hero Sectie & Bovenste Join Knop (met Logo)
    ========================================================================== */
 .hero {
-    padding: 40px 20px;
+    padding: 30px 20px;
     display: flex;
     justify-content: center;
 }
 
+/* De opvallende bovenste knop met logo */
+.top-join-btn {
+    background-color: #00d4ff;
+    color: #121212;
+    padding: 12px 28px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    font-size: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 25px;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.4);
+}
+
+.top-join-btn:hover {
+    background-color: #ffffff;
+    transform: scale(1.05);
+}
+
+/* Afmetingen van het logo binnen de knop */
+.btn-logo {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    border-radius: 50%; /* Maakt het logo subtiel rond */
+}
+
+/* ==========================================================================
+   4. Startscherm Welkomstkaart
+   ========================================================================== */
 .r6s-card {
     background-color: #1f1f1f;
     border: 2px solid #00d4ff;
@@ -84,30 +118,27 @@ h1 {
     margin: 30px 0 20px 0;
 }
 
-/* Knop: Join Zorvex Clan */
 .join-btn {
-    background-color: #00d4ff;
-    color: #121212;
-    padding: 16px 32px;
+    background-color: #7289da; /* Discord Paars-Blauw */
+    color: #ffffff;
+    padding: 14px 28px;
     text-decoration: none;
     font-weight: bold;
     border-radius: 8px;
-    font-size: 22px;
+    font-size: 20px;
     display: block;
     width: fit-content;
     margin: 0 auto;
     transition: 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 212, 255, 0.4);
 }
 
 .join-btn:hover {
-    background-color: #ffffff;
-    color: #121212;
+    background-color: #5b6eae;
     transform: scale(1.05);
 }
 
 /* ==========================================================================
-   4. Games & Team Pagina Structuur
+   5. Games & Team Pagina Structuur
    ========================================================================== */
 .games-list, .team-list {
     display: flex;
