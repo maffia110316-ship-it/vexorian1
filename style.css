@@ -1,55 +1,55 @@
 /* ==========================================================================
-   1. Algemene Reset & Mobiele Bescherming
+   1. Strikte Mobiele Reset (Voorkomt horizontaal schuiven)
    ========================================================================== */
 *, *::before, *::after {
-    box-sizing: border-box; /* Zorgt dat padding de elementen niet breder maakt */
+    box-sizing: border-box;
 }
 
 html, body {
     margin: 0;
     padding: 0;
-    width: 100%;
+    width: 100vw;
     max-width: 100%;
-    overflow-x: hidden; /* Voorkomt absoluut dat je naar rechts kunt schuiven */
+    overflow-x: hidden; /* Blokkeert horizontaal schuiven volledig */
     background-color: #121212;
-    color: white;
+    color: #ffffff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
 }
 
 h1 {
-    font-size: 26px;
-    margin-bottom: 15px;
+    font-size: 24px;
+    margin-bottom: 12px;
     color: #ffffff;
     word-wrap: break-word;
 }
 
 .slogan {
-    font-size: 16px;
+    font-size: 15px;
     color: #00d4ff;
     font-style: italic;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 /* ==========================================================================
-   2. Navigatiebalk (Navbar)
+   2. Navigatiebalk
    ========================================================================== */
 .navbar {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 12px 10px;
+    padding: 10px 5px;
     background-color: #1f1f1f;
-    gap: 10px;
+    gap: 8px;
     width: 100%;
-    flex-wrap: wrap; /* Zorgt dat knoppen meebewegen naar een nieuwe regel */
+    flex-wrap: wrap;
 }
 
 .navbar a {
     color: white;
-    padding: 8px 10px;
+    padding: 6px 10px;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: bold;
     transition: 0.3s;
 }
@@ -58,14 +58,15 @@ h1 {
     color: #00d4ff;
 }
 
-/* Specifieke stijl voor de JOIN CLAN knop */
 .navbar .nav-join-btn {
     background-color: #00d4ff;
     color: #121212;
     border-radius: 6px;
     padding: 8px 16px;
+    width: 90%; /* Zorgt dat de knop op mobiel een mooie eigen regel krijgt */
+    margin-top: 4px;
+    display: block;
     box-shadow: 0 0 10px rgba(0, 212, 255, 0.4);
-    white-space: nowrap;
 }
 
 .navbar .nav-join-btn:hover {
@@ -74,42 +75,60 @@ h1 {
 }
 
 /* ==========================================================================
-   3. Inhoud & Kaarten
+   3. Banner Sectie
+   ========================================================================== */
+.banner-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 12px auto 5px auto;
+    padding: 0 10px;
+}
+
+.clan-banner {
+    width: 100%;
+    height: auto; /* Zorgt dat de afbeelding nooit vervormt */
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0, 212, 255, 0.3);
+    display: block;
+}
+
+/* ==========================================================================
+   4. Inhoud & Kaarten
    ========================================================================== */
 .hero {
-    padding: 20px 10px;
+    padding: 10px;
+    width: 100%;
     display: flex;
     justify-content: center;
-    width: 100%;
 }
 
 .content {
     width: 100%;
-    max-width: 600px;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 10px;
+    padding: 0 5px;
 }
 
 .r6s-card {
     background-color: #1f1f1f;
     border: 2px solid #00d4ff;
-    border-radius: 12px;
-    padding: 20px;
+    border-radius: 10px;
+    padding: 16px;
     width: 100%;
     text-align: left;
-    box-shadow: 0 0 20px rgba(0, 212, 255, 0.25);
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
 }
 
 .r6s-card h1 {
     color: #00d4ff;
     text-align: center;
-    font-size: 20px;
+    font-size: 19px;
 }
 
 .r6s-description {
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.5;
     color: #dddddd;
 }
@@ -117,54 +136,51 @@ h1 {
 .r6s-list {
     list-style: none;
     padding-left: 0;
-    margin: 20px 0;
+    margin: 15px 0;
 }
 
 .r6s-list li {
-    font-size: 15px;
-    margin-bottom: 10px;
+    font-size: 14px;
+    margin-bottom: 8px;
     font-weight: bold;
 }
 
 .r6s-callout {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
     color: #ffffff;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 /* ==========================================================================
-   4. Games & Team Lijsten
+   5. Games & Team Lijsten
    ========================================================================== */
 .games-list, .team-list {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
     width: 100%;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .game-card, .team-card {
     background-color: #1f1f1f;
-    padding: 15px 15px;
+    padding: 14px;
     border-radius: 8px;
     width: 100%;
-    max-width: 340px;
     border: 2px solid #00d4ff;
-    transition: 0.3s ease-in-out;
 }
 
 .role-title {
     display: block;
-    font-size: 13px;
+    font-size: 12px;
     letter-spacing: 2px;
     font-weight: bold;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
 }
 
-/* Specifieke rollen op teampagina */
 .leader-card { border-color: #a020f0; }
 .leader-card .role-title { color: #a020f0; }
 
@@ -175,33 +191,7 @@ h1 {
 .admin-card .role-title { color: #ff69b4; }
 
 .member-name {
-    margin: 5px 0;
-    font-size: 18px;
+    margin: 4px 0;
+    font-size: 17px;
     font-weight: bold;
-}
-
-/* ==========================================================================
-   5. Mobiele Schermen (Telefoons)
-   ========================================================================== */
-@media screen and (max-width: 480px) {
-    .navbar {
-        gap: 8px;
-        padding: 10px 5px;
-    }
-
-    .navbar a {
-        font-size: 14px;
-        padding: 6px 8px;
-    }
-
-    /* Zet de JOIN CLAN knop op mobiel netjes onder de overige links */
-    .navbar .nav-join-btn {
-        width: 90%;
-        margin-top: 4px;
-        text-align: center;
-    }
-
-    h1 {
-        font-size: 22px;
-    }
 }
